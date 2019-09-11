@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz</title>
+        <link rel="stylesheet" type="text/css" href="static/style.css?q=342423243342">
+
+</head>
+<body>
+<div class="container">
+<form action="/" method="POST">
+    <h1>Guessing Game V.1.1</h1>
+    <p><label>
+        {% if start %}{{start}}{% endif %}
+    </label></p>
+    <p><label>
+        {% if guessing %}<b>{{guessing}}</b>{% endif %}
+    </label></p>
+    <label><input type="hidden" name="moves" value="{{moves}}">
+    </label>
+    <label>
+    <p>Moves left: {{moves}}</p>
+    </label>
+    <label><input type="hidden" name="min_number" value="{{min_number}}">
+    </label>
+    <br>
+    <label><input type="hidden" name="max_number" value="{{max_number}}">
+    </label>
+    <br>
+
+        {% if min_number %}<label>
+       <button type="submit" name="action" value="too_big_number">My number is smaller</button>
+    </label>
+    <label>
+        <button type="submit" name="action" value="too_small_number">My number is bigger</button>
+    </label>
+    <label>
+        <button type="submit" name="action" value="success">That's it!</button>
+    </label>{% endif %}
+</form>
+</div>
+</body>
+</html>

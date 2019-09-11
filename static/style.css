@@ -1,0 +1,35 @@
+.container {
+    border-radius: 5px;
+    max-width: 900px;
+    padding: 20px;
+    display: block;
+    background-color: whitesmoke;
+    border: none;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+button {
+    background-color: lightslategray;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: center;
+    align-content: center;
+}
+
+body, html {
+    width: auto;
+}
+
+@media screen and (max-width: 600px) {
+  button[type=submit] {
+    width: 100%;
+    margin-top: 25px;
+  }
+}
